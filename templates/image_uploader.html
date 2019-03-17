@@ -1,0 +1,21 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Upload Form</title>
+</head>
+<body>
+<p>
+<h1>Select & Upload</h1></p>
+<form enctype="multipart/form-data" action="api/v1/dog" method="post">
+    File: <input type="file" name="newImg"/>
+    <br/>
+    <br/>
+    <input type="submit" value="upload"/>
+</form>
+
+<form action='api/v1/dog' enctype="multipart/form-data" method='post'>
+    <input type='file' name='newImg'/><br/>
+    <input type='submit' value='submit'/>
+</form>
+
+</body>
