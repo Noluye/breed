@@ -1,12 +1,12 @@
 import tornado.ioloop
 import tornado.web
+import tornado.httpserver
 from settings import port
 from app import Application
+from settings import ssl_options
 
 if __name__ == "__main__":
     app = Application()
-    app.listen(port)  # 只能在单进程模式中使用，等价如下
-    # http_server = tornado.httpserver.HTTPServer(app)
-    # http_server.bind(8888)
-    # http_server.start(1)
+    server = tornado.httpserver.HTTPServer(app, ssl_options=ssl_options)
+    server.listen(port)
     tornado.ioloop.IOLoop.current().start()  # 循环询问linux-epoll

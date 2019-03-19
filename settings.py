@@ -14,3 +14,8 @@ tornado_option = {
     'static_path': os.path.join(BASE_DIRS, 'static'),
     'template_path': os.path.join(BASE_DIRS, 'templates'),
 }
+
+ssl_options = {
+    "certfile": "/data/https/server.crt",
+    "keyfile": "/data/https/server.key",
+}
