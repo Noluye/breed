@@ -855,7 +855,9 @@ class JudgeDogHandler(RequestHandler):
         file_img = file_imgs[0]
         try:
             predict = Xception_predict_breed(BytesIO(file_img['body']))
+            print(predict)
             predict = predict.split(sep='.')[-1]
+            print(predict)
             self.write(label_to_dog.get(predict, None))
         except Exception as e:
             print(e)
