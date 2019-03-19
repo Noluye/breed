@@ -857,6 +857,7 @@ class JudgeDogHandler(RequestHandler):
             predict = Xception_predict_breed(BytesIO(file_img['body']))
             predict = predict.split(sep='.')[-1]
             self.write(label_to_dog.get(predict, None))
-        except:
+        except Exception as e:
+            print(e)
             self.set_status(400, 'bad request2')
             self.write('bad request2')
