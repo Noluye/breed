@@ -16,6 +16,6 @@ tornado_option = {
 }
 
 ssl_options = {
-    "certfile": "/data/https/server.crt",
-    "keyfile": "/data/https/server.key",
+    "certfile": "/data/https/1948539_heyulong.cn.pem",
+    "keyfile": "/data/https/1948539_heyulong.cn.key",
 }
