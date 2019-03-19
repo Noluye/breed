@@ -10,7 +10,7 @@ port = options.port
 BASE_DIRS = os.path.dirname(__file__)
 
 tornado_option = {
-    'debug': True,
+    'debug': False,
     'static_path': os.path.join(BASE_DIRS, 'static'),
     'template_path': os.path.join(BASE_DIRS, 'templates'),
 }
