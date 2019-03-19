@@ -2,7 +2,7 @@ from tornado.options import define, options, parse_command_line
 import os
 
 # 命令行参数
-define('port', default=8080, type=int, help='port to be bound to.')
+define('port', default=8005, type=int, help='port to be bound to.')
 parse_command_line()
 port = options.port
 

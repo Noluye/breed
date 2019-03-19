@@ -850,12 +850,13 @@ class JudgeDogHandler(RequestHandler):
     def post(self, *args, **kwargs):
         file_imgs = self.request.files.get('newImg', None)  # 获取上传文件数据，返回文件列表
         if len(file_imgs) <= 0:
-            self.set_status(400, 'bad request')
-            return
+            self.set_status(400, 'bad request1')
+            self.write('bad request1')
         file_img = file_imgs[0]
         try:
             predict = Xception_predict_breed(BytesIO(file_img['body']))
             predict = predict.split(sep='.')[-1]
             self.write(label_to_dog.get(predict, None))
         except:
-            self.set_status(400, 'bad request')
+            self.set_status(400, 'bad request2')
+            self.write('bad request2')
