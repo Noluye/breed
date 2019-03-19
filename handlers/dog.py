@@ -851,6 +851,9 @@ label_to_dog = {
     },
 }
 
+for k, v in label_to_dog.items():
+    v['english_name'] = k
+
 
 def path_to_tensor(img_path):
     # 用PIL加载RGB图像为PIL.Image.Image类型
